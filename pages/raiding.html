@@ -1,0 +1,1734 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Oblivion</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../stylesheets/raiding.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+
+    <script type="text/javascript" src="../javascripts/scale.fix.js"></script>
+    <script type="text/javascript" src="../javascripts/kill-count.js"></script>
+    <script type="text/javascript" src="../javascripts/navigation.js"></script>
+</head>
+
+<body class="flex-row reset-gutter">
+    <nav class="mobile-menu flex-row display-mobile">
+        <i class="material-icons md-36 mobile-menu-icon" onclick="openNav()">menu</i>
+        <h1 class="main-header nav-header"><a href="https://sheffywow.github.io/oblivionguild">OBLIVION</a></h1>
+    </nav>
+
+    <nav class="flex-col navigation" id="navigation">
+        <header>
+            <h1 class="main-header nav-header display-desktop"><a href="https://sheffywow.github.io/oblivionguild">OBLIVION</a></h1>
+            <i class="material-icons md-36 mobile-menu-icon close-icon display-mobile" onclick="closeNav()">close</i>
+        </header>
+
+        <ul class="flex-row icons">
+
+            <li class="wowprogress-bg">
+                <!-- wowprogress favicon is so fucking scuffed that I just re-created it manually -->
+                <a href=https://www.wowprogress.com/guild/eu/blackrock/Oblivion target="_blank" rel="noopener noreferrer"><span class="wowprogress">W</span></a>
+            </li>
+            <li>
+                <a href=https://raider.io/guilds/eu/blackrock/Oblivion target="_blank" rel="noopener noreferrer"><img class="icon" src="../assets/media/icons/raiderio.png" alt="raiderio"></a>
+            </li>
+
+            <li>
+                <a href=https://www.warcraftlogs.com/guild/id/563170 target="_blank" rel="noopener noreferrer"><img class="icon" src="../assets/media/icons/warcraftlogs.png" alt="warcraftlogs"></a>
+            </li>
+        </ul>
+
+        <button class="button">
+            <a href="https://docs.google.com/forms/d/1l9cmVak1sj0khKXrwM1TPaDcbWHRt3GA8wIcr7lhYjU" class="apply" target="_blank" rel="noopener noreferrer">APPLY</a>
+        </button>
+
+        <ul class="legend">
+            <li><a href="/oblivionguild/" class="flex-row"><span>HOME </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/raiding" class="flex-row"><span class="emphasize">RAIDING </span><i
+                        class="emphasize material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/roster" class="flex-row"><span>ROSTER</span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/streams" class="flex-row"><span>STREAMS </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/boosting" class="flex-row"><span>BOOSTING </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <!--<li><a href="oblivionguild/pages/videos">Videos/</a></li>-->
+            <li><a href="https://wago.io/p/squallne" target="_blank" rel="noopener noreferrer" class="flex-row"><span>WEAKAURAS</span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+        </ul>
+
+        <a class="github-link display-desktop" href="https://github.com/SheffyWoW/oblivionguild" target="_blank"
+            rel="noopener noreferrer"><span class="flex-row">View on GitHub<i
+                    class="material-icons md-18 open-new-icon">open_in_new</i></span>
+            <small>github/oblivionguild</small></a>
+    </nav>
+
+    <section class="main-content tier-row flex-row" id="kill-count-table">
+        <!-- Amirdrassil -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Amirdrassil.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Amirdrassil, the Dream's Hope</p>
+                <p class="world-rank">61</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Fyrakk the Blazing</p>
+                    <p class="world-rank">61</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 334</p>
+                        <p class="subtitle">Jan 04, 2024</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Tindral Sageswift, Seer of the Flame</p>
+                    <p class="world-rank">76</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 399</p>
+                        <p class="subtitle">Dec 18, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Smolderon</p>
+                    <p class="world-rank">52</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 71</p>
+                        <p class="subtitle">Nov 27, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Larodar, Keeper of the Flame</p>
+                    <p class="world-rank">87</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 12</p>
+                        <p class="subtitle">Nov 23, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Nymue, Weaver of the Cycle</p>
+                    <p class="world-rank">114</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 26</p>
+                        <p class="subtitle">Nov 23, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Council of Dreams</p>
+                    <p class="world-rank">90</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 14</p>
+                        <p class="subtitle">Nov 20, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Volcoross</p>
+                    <p class="world-rank">90</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 2</p>
+                        <p class="subtitle">Nov 19, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Igira the Cruel</p>
+                    <p class="world-rank">129</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">Nov 19, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Gnarlroot</p>
+                    <p class="world-rank">241</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 0</p>
+                        <p class="subtitle">Nov 19, 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aberrus -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Aberrus.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Aberrus, the Shadowed Crucible</p>
+                <p class="world-rank">57</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Scalecommander Sarkareth</p>
+                    <p class="world-rank">57</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 146</p>
+                        <p class="subtitle">Jun 06, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Echo of Neltharion</p>
+                    <p class="world-rank">53</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 83</p>
+                        <p class="subtitle">May 29, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Magmorax</p>
+                    <p class="world-rank">43</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 16</p>
+                        <p class="subtitle">May 22, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Vigilant Steward, Zskarn</p>
+                    <p class="world-rank">57</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 40</p>
+                        <p class="subtitle">May 22, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Rashok, the Elder</p>
+                    <p class="world-rank">70</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 59</p>
+                        <p class="subtitle">May 18, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Forgotten Experiments</p>
+                    <p class="world-rank">59</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">May 14, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Amalgamation Chamber</p>
+                    <p class="world-rank">192</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 0</p>
+                        <p class="subtitle">May 14, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Assault of the Zaqali</p>
+                    <p class="world-rank">289</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">May 14, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kazzara, the Hellforged</p>
+                    <p class="world-rank">514</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 0</p>
+                        <p class="subtitle">May 14, 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vault -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/VotI.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Vault of the Incarnates</p>
+                <p class="world-rank">104</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Raszageth the Storm-Eater</p>
+                    <p class="world-rank">104</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 370</p>
+                        <p class="subtitle">Feb 05, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Broodkeeper Diurna</p>
+                    <p class="world-rank">107</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 82</p>
+                        <p class="subtitle">Jan 12, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Dathea, Ascended</p>
+                    <p class="world-rank">97</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 45</p>
+                        <p class="subtitle">Jan 05, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kurog Grimtotem</p>
+                    <p class="world-rank">64</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 72</p>
+                        <p class="subtitle">Jan 01, 2023</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Sennarth</p>
+                    <p class="world-rank">98</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 44</p>
+                        <p class="subtitle">Dec 27, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Terros</p>
+                    <p class="world-rank">49</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 30</p>
+                        <p class="subtitle">Dec 20, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Primal Council</p>
+                    <p class="world-rank">148</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">Dec 18, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Eranog</p>
+                    <p class="world-rank">217</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 0</p>
+                        <p class="subtitle">Dec 18, 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sepulcher -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/SoFO.png" height="80%" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Sepulcher of the First Ones</p>
+                <p class="world-rank">82</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Zovaal, the Jailer</p>
+                    <a href="https://www.youtube.com/watch?v=Djp2SFTgVIs" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">82</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 294</p>
+                        <p class="subtitle">May 05, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Rygelon</p>
+                    <a href="https://www.youtube.com/watch?v=9ZMzlr8pj1A" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">85</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 85</p>
+                        <p class="subtitle">Apr 19, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Lords of Dread</p>
+                    <a href="https://www.youtube.com/watch?v=H5PN0r7GdOE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">82</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 22</p>
+                        <p class="subtitle">Apr 14, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Anduin Wrynn</p>
+                    <a href="https://www.youtube.com/watch?v=SRbk8o2iTeY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">85</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 168</p>
+                        <p class="subtitle">Apr 13, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Lihuvim</p>
+                    <a href="https://www.youtube.com/watch?v=jmZNvPZeUw4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">57</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 38</p>
+                        <p class="subtitle">Mar 21, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Halondrus</p>
+                    <a href="https://www.youtube.com/watch?v=OEl6zFg6-sY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">84</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 168</p>
+                        <p class="subtitle">Apr 3, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Skolex</p>
+                    <a href="https://www.youtube.com/watch?v=vsrKThGuA9M" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">69</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 11</p>
+                        <p class="subtitle">Mar 13, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Prototype Pantheon</p>
+                    <a href="https://www.youtube.com/watch?v=1FrNrpwCrko" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">68</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 34</p>
+                        <p class="subtitle">Mar 20, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Artificer Xy'mox</p>
+                    <a href="https://www.youtube.com/watch?v=8Y9m2Tx6kjY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">34</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 14</p>
+                        <p class="subtitle">Mar 13, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Dausegne</p>
+                    <a href="https://www.youtube.com/watch?v=px6k0DNPITQ" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">81</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 31</p>
+                        <p class="subtitle">Mar 14, 2022</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Vigilant Guardian</p>
+                    <a href="https://www.youtube.com/watch?v=XhVigH8srR8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">37</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">Mar 10, 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sanctum -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Sanctum.png" height=auto width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Sanctum of Domination</p>
+                <p class="world-rank">93</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Sylvanas Windrunner</p>
+                    <a href="https://www.youtube.com/watch?v=9uc5u_ImUs8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">93</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 98</p>
+                        <p class="subtitle">Aug 12, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kel'Thuzad</p>
+                    <a href="https://www.youtube.com/watch?v=8OPFbdt7u5s" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">80</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 41</p>
+                        <p class="subtitle">Aug 02, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Fatescribe Roh-Kalo</p>
+                    <a href="https://www.youtube.com/watch?v=gO3z0NRuYfQ" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">81</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 31</p>
+                        <p class="subtitle">Aug 01, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Guardian of the First Ones</p>
+                    <a href="https://www.youtube.com/watch?v=GqAjmrmOHrs" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">79</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 7</p>
+                        <p class="subtitle">Jul 29, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Painsmith Raznal</p>
+                    <a href="https://www.youtube.com/watch?v=NeQBUpGBjU8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">92</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 73</p>
+                        <p class="subtitle">Jul 29, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Soulrender Dormazain</p>
+                    <a href="https://www.youtube.com/watch?v=AcvZPWV7dog" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">97</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 29</p>
+                        <p class="subtitle">Jul 22, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Remnant of Ner'zhul</p>
+                    <a href="https://www.youtube.com/watch?v=blJb4weHg9s" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">71</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 49</p>
+                        <p class="subtitle">Jul 19, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Nine</p>
+                    <a href="https://www.youtube.com/watch?v=ZMLlfmgLNrI" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">54</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 4</p>
+                        <p class="subtitle">Jul 14, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Eye of the Jailer</p>
+                    <a href="https://www.youtube.com/watch?v=BQHH-ge8a1M" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">72</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">Jul 14, 2021</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Tarragrue</p>
+                    <a href="https://www.youtube.com/watch?v=9n_d5RzZw4o" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>                    
+                    <p class="world-rank">450</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 2</p>
+                        <p class="subtitle">Jul 14, 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Nathria -->
+                <div class="raid-tier" onclick="toggleTier(this)">
+                    <img src="../assets/media/Tiers/Nathria.jpg" height=auto width="100%">
+                    <div class="flex-col tier-content">
+                        <p class="tier-name">Castle Nathria</p>
+                        <p class="world-rank">72</p>
+                        <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                        <i class="close-tier material-icons md-36 ">highlight_off</i>
+                    </div>
+        
+                    <div class="tier-bosses">
+                        <div id="boss-container" class="flex-col">
+                            <p>Sire Denathrius</p>
+                            <a href="https://www.youtube.com/watch?v=KAvv8hSnLFU" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                            <p class="world-rank">72</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 82</p>
+                                <p class="subtitle">Jan 27, 2021</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Stone Legion Generals</p>
+                            <a href="https://www.youtube.com/watch?v=GFrgfPFb_Wk" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>      
+                            <p class="world-rank">77</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 242</p>
+                                <p class="subtitle">Jan 21, 2021</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Sludgefist</p>
+                            <a href="https://www.youtube.com/watch?v=f4IyKCxriFw" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>       
+                            <p class="world-rank">72</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 90</p>
+                                <p class="subtitle">Jan 05, 2021</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>The Council of Blood</p>
+                            <a href="https://www.youtube.com/watch?v=WhpvUUx2YDs" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>       
+                            <p class="world-rank">102</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 62</p>
+                                <p class="subtitle">Jan 03, 2021</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Lady Inerva Darkvein</p>
+                            <a href="https://www.youtube.com/watch?v=bQzR3N69mZk" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a> 
+                            <p class="world-rank">151</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 45</p>
+                                <p class="subtitle">Dec 28, 2020</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Artificer Xy'mox</p>
+                            <a href="https://www.youtube.com/watch?v=gmwmEjMW3t4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                            <p class="world-rank">95</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 46</p>
+                                <p class="subtitle">Dec 21, 2020</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Sun King's Salvation</p>
+                            <a href="https://www.youtube.com/watch?v=1JsyrAQgFXE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>        
+                            <p class="world-rank">76</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 33</p>
+                                <p class="subtitle">Dec 20, 2020</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Hungering Destroyer</p>
+                            <a href="https://www.youtube.com/watch?v=U62VeAvyTNU" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                            <p class="world-rank">64</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 25</p>
+                                <p class="subtitle">Dec 17, 2020</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Huntsman Altimor</p>
+                            <a href="https://www.youtube.com/watch?v=RP9ZcjCwhxI" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                            <p class="world-rank">163</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 4</p>
+                                <p class="subtitle">Dec 16, 2020</p>
+                            </div>
+                        </div>
+                        <div id="boss-container" class="flex-col">
+                            <p>Shriekwing</p>
+                            <a href="https://www.youtube.com/watch?v=m3_K0FmN01w" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>                           
+                            <p class="world-rank">190</p>
+                            <div class="flex-row bottom-row">
+                                <p class="subtitle">Wipes: 4</p>
+                                <p class="subtitle">Dec 16, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Ny'alotha -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/nyalotha.png" height=auto width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Ny'alotha, the Waking City</p>
+                <p class="world-rank">110</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>N'Zoth the Corruptor</p>
+                    <a href="https://www.youtube.com/watch?v=eCwsSAZc24Y" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">110</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 192</p>
+                        <p class="subtitle">Mar 12, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Carapace of N'Zoth</p>
+                    <a href="https://www.youtube.com/watch?v=1nGIR_Od0mE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">102</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 45</p>
+                        <p class="subtitle">Feb 24, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Il'gynoth, Corruption Reborn</p>
+                    <a href="https://www.youtube.com/watch?v=6NbzgGyb_so" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">122</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 61</p>
+                        <p class="subtitle">Feb 20, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Ra-den the Despoiled</p>
+                    <a href="https://www.youtube.com/watch?v=E_QQZoAcDA4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">142</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 45</p>
+                        <p class="subtitle">Feb 16, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Drest'agath</p>
+                    <a href="https://www.youtube.com/watch?v=XRrZW6a1Xa0" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">85</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 24</p>
+                        <p class="subtitle">Feb 10, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Vexiona</p>
+                    <a href="https://www.youtube.com/watch?v=8wyQbSItFVM" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">150</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 40</p>
+                        <p class="subtitle">Feb 09, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Dark Inquisitor Xanesh</p>
+                    <a href="https://www.youtube.com/watch?v=Fp7IddRsDDQ" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">93</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 39</p>
+                        <p class="subtitle">Feb 03, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Hivemind</p>
+                    <a href="https://www.youtube.com/watch?v=IvWKhai36XY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">147</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 24</p>
+                        <p class="subtitle">Feb 02, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Shad'har the Insatiable</p>
+                    <a href="https://www.youtube.com/watch?v=YwSG8BfXtjE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">121</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 7</p>
+                        <p class="subtitle">Feb 02, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Maut</p>
+                    <a href="https://www.youtube.com/watch?v=DCmRtKk8L-c" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">126</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 14</p>
+                        <p class="subtitle">Jan 29, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Prophet Skitra</p>
+                    <a href="https://www.youtube.com/watch?v=FrNsYrALc0w" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">143</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">Jan 29, 2020</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Wrathion, the Black Emperor</p>
+                    <a href="https://www.youtube.com/watch?v=ykaSxANzowY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">227</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 4</p>
+                        <p class="subtitle">Jan 29, 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Eternal palace -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/TEP.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">The Eternal Palace</p>
+                <p class="world-rank">114</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Queen Azshara</p>
+                    <a href="https://www.youtube.com/watch?v=ZPKThRC1hgw" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">114</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 273</p>
+                        <p class="subtitle">Sep 05, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Za'qul, Harbinger of Ny'alotha</p>
+                    <a href="https://www.youtube.com/watch?v=Zw94dnFXcZg" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">117</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 90</p>
+                        <p class="subtitle">Aug 14, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Queen's Court</p>
+                    <a href="https://www.youtube.com/watch?v=SVU-OKGL3Y4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">136</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 49</p>
+                        <p class="subtitle">Aug 06, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Orgozoa</p>
+                    <a href="https://www.youtube.com/watch?v=ESuGq0QjoYA" target="_blank" data-tooltip="Twitter" data-position="bottom" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">87</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 99</p>
+                        <p class="subtitle">Jul 28, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Lady Ashavane</p>
+                    <p class="world-rank">57</p>
+                    <a href="https://www.youtube.com/watch?v=MT1bBymVMyE" target="_blank" data-tooltip="Twitter" data-position="bottom" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 53</p>
+                        <p class="subtitle">Jul 22, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Radiance of Azshara</p>
+                    <a href="https://www.youtube.com/watch?v=Nl8UUIwdNas" target="_blank" data-tooltip="Twitter" data-position="bottom" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">143</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 5</p>
+                        <p class="subtitle">Jan 17, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Blackwater Behemoth</p>
+                    <a href="https://www.youtube.com/watch?v=kTHCVTopdbs" target="_blank" data-tooltip="Twitter" data-position="bottom" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">150</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 11</p>
+                        <p class="subtitle">Jul 17, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Abyssal Commander Sivaz</p>
+                    <a href="https://www.youtube.com/watch?v=8AdsZur8CNs" target="_blank" data-tooltip="Twitter" data-position="bottom" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">212</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">Jul 17, 2019</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- Crucible of Storms -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/CoS.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Crucible of Storms</p>
+                <p class="world-rank">85</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Uu'nat</p>
+                    <a href="https://www.youtube.com/watch?v=L_vuSMZuquA" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">85</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 434</p>
+                        <p class="subtitle">Jun 02, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Restless Cabal</p>
+                    <a href="https://www.youtube.com/watch?v=YMWT8g6Q-Bk" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">95</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 284</p>
+                        <p class="subtitle">May 06, 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battle of Dazar'alor -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/BoD.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Battle of Dazar'alor</p>
+                <p class="world-rank">96</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Jaina Proudmoore</p>
+
+                    <a href="https://www.youtube.com/watch?v=iG6Fre0sFc8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">96</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 299</p>
+                        <p class="subtitle">Mar 7, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Stormwall Blockade</p>
+                    <a href="https://www.youtube.com/watch?v=KbAmmwl4cJg" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">94</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 51</p>
+                        <p class="subtitle">Feb 11, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>High Tinker Mekkatorque</p>
+                    <a href="https://www.youtube.com/watch?v=3S_xB0Hx9PU" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">124</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 87</p>
+                        <p class="subtitle">Feb 10, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>King Rastakhan</p>
+                    <a href="https://www.youtube.com/watch?v=3R7gHpqBCPQ" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">88</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 19</p>
+                        <p class="subtitle">Feb 03, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Conclave of the Chosen</p>
+                    <a href="https://www.youtube.com/watch?v=8aLySoYo42s" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">116</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 14</p>
+                        <p class="subtitle">Feb 03, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Opulence</p>
+                    <a href="https://www.youtube.com/watch?v=QI5ChJTP5Zo" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">67</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 16</p>
+                        <p class="subtitle">Jan 31, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Jadefire Masters</p>
+                    <a href="https://www.youtube.com/watch?v=WWQUDvTn7U4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">333</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 9</p>
+                        <p class="subtitle">Jan 31, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Grong</p>
+                    <a href="https://www.youtube.com/watch?v=e0kbzM2TMHg" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">213</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 10</p>
+                        <p class="subtitle">Jan 30, 2019</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Champion of the Light</p>
+                    <p class="world-rank">731</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">Jan 30, 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Uldir -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Uldir.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Uldir</p>
+                <p class="world-rank">140</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>G'huun</p>
+                    <a href="https://www.youtube.com/watch?v=1QRyDOFKZ7c" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">140</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 248</p>
+                        <p class="subtitle">Oct 21, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Mythrax the Unraveler</p>
+                    <a href="https://www.youtube.com/watch?v=tzLYIqavka8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">110</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 91</p>
+                        <p class="subtitle">Oct 4, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Zul</p>
+                    <a href="https://www.youtube.com/watch?v=ekY9Z2Qg1dM" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">143</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 56</p>
+                        <p class="subtitle">Sep 30, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Fetid Devourer</p>
+                    <a href="https://www.youtube.com/watch?v=ziQLUcqYE4M" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">150</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 137</p>
+                        <p class="subtitle">Sep 26, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Vectis</p>
+                    <a href="https://www.youtube.com/watch?v=Gq3N9E8AQRs" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">114</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 35</p>
+                        <p class="subtitle">Sep 17, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <a href="https://www.youtube.com/watch?v=YYD2qzwf1sU" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p>Zek'voz, Herald of N'Zoth</p>
+                    <p class="world-rank">178</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 29</p>
+                        <p class="subtitle">Sep 16, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>MOTHER</p>
+                    <a href="https://www.youtube.com/watch?v=meofTz_cUuE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">308</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 20</p>
+                        <p class="subtitle">Sep 13, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Taloc</p>
+                    <a href="https://www.youtube.com/watch?v=8PN_Cy1bcv0" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">316</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 3</p>
+                        <p class="subtitle">Sep 12, 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antorus, the Burning Throne -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Antorus.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Antorus, the Burning Throne</p>
+                <p class="world-rank">78</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Argus the Unmaker</p>
+                    <a href="https://www.youtube.com/watch?v=fO4ecfkoZ-4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">78</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 350</p>
+                        <p class="subtitle">Jan 25, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Aggramar</p>
+                    <a href="https://www.youtube.com/watch?v=3DIyNbZBucM" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">110</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 109</p>
+                        <p class="subtitle">Jan 07, 2018</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Coven of Shivarra</p>
+                    <a href="https://www.youtube.com/watch?v=a2BwpnRh8Cc" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">96</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 38</p>
+                        <p class="subtitle">Dec 18, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Varimathras</p>
+                    <a href="https://www.youtube.com/watch?v=XdLszMU-a70" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">99</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 47</p>
+                        <p class="subtitle">Dec 17, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kin'garoth</p>
+                    <a href="https://www.youtube.com/watch?v=GGmKxHt5rh0" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">98</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 21</p>
+                        <p class="subtitle">Dec 14, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Imonar the Soulhunter</p>
+                    <a href="https://www.youtube.com/watch?v=4utlWUUCMCY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">140</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 59</p>
+                        <p class="subtitle">Dec 11, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Eonar</p>
+                    <a href="https://www.youtube.com/watch?v=FdCtIk3kz_4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">76</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 4</p>
+                        <p class="subtitle">Dec 07, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Portal Keeper Hasabel</p>
+                    <a href="https://www.youtube.com/watch?v=ctK968L55ko" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">94</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 6</p>
+                        <p class="subtitle">Dec 07, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Antoran High Command</p>
+                    <a href="https://www.youtube.com/watch?v=h46NgLsv1gE" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">61</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 5</p>
+                        <p class="subtitle">Dec 06, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Felhounds of Sargeras</p>
+                    <a href="https://www.youtube.com/watch?v=n5a4bse7-QY" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">78</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 3</p>
+                        <p class="subtitle">Dec 06, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Garothi Worldbreaker</p>
+                    <a href="https://www.youtube.com/watch?v=Y_UkTV4wH74" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">209</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">Dec 06, 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tomb of Sargeras -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/ToS.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Tomb of Sargeras</p>
+                <p class="world-rank">83</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Kil'jaeden</p>
+                    <a href="https://www.youtube.com/watch?v=gGZh_A1cPjc" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">83</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 513</p>
+                        <p class="subtitle">Sep 18, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Fallen Avatar</p>
+                    <a href="https://www.youtube.com/watch?v=EauBFcXwOrg" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">91</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 372</p>
+                        <p class="subtitle">Aug 17, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Maiden of Vigilance</p>
+                    <a href="https://www.youtube.com/watch?v=o9ugdnEoY-8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">99</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 56</p>
+                        <p class="subtitle">Jul 23, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Mistress Sassz'ine</p>
+                    <a href="https://www.youtube.com/watch?v=xfmInQGeDyk" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">135</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 239</p>
+                        <p class="subtitle">Jul 20, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Desolate Host</p>
+                    <p class="world-rank">88</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 20</p>
+                        <p class="subtitle">Jul 03, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Sisters of the Moon</p>
+                    <p class="world-rank">102</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 37</p>
+                        <p class="subtitle">Jul 02, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Harjatan</p>
+                    <p class="world-rank">106</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 10</p>
+                        <p class="subtitle">Jun 28, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Demonic Inquisition</p>
+                    <p class="world-rank">65</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 15</p>
+                        <p class="subtitle">Jun 28, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Goroth</p>
+                    <p class="world-rank">111</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 1</p>
+                        <p class="subtitle">Jun 28, 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nighthold -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/Nighthold.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">The Nighthold</p>
+                <p class="world-rank">130</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Gul'dan</p>
+                    <a href="https://www.youtube.com/watch?v=0uCB_vAtSK8" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">130</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 267</p>
+                        <p class="subtitle">Apr 12, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Grand Magistrix Elisande</p>
+                    <p class="world-rank">98</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 184</p>
+                        <p class="subtitle">Mar 13, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Star Augur Etraeus</p>
+
+                    <p class="world-rank">105</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 140</p>
+                        <p class="subtitle">Feb 26, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Tichondrius</p>
+                    <p class="world-rank">162</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 48</p>
+                        <p class="subtitle">Feb 13, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>High Botanist Tel'arn</p>
+                    <p class="world-rank">98</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 7</p>
+                        <p class="subtitle">Feb 6, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Spellblade Aluriel</p>
+
+                    <p class="world-rank">68</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 88</p>
+                        <p class="subtitle">Jan 30, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Krosus</p>
+
+                    <p class="world-rank">231</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 70</p>
+                        <p class="subtitle">Feb 05, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Trilliax</p>
+                    <p class="world-rank">140</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 4</p>
+                        <p class="subtitle">Jan 26, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Chromatic Anomaly</p>
+                    <p class="world-rank">83</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 8</p>
+                        <p class="subtitle">Jan 25, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Skorpyron</p>
+                    <p class="world-rank">286</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 2</p>
+                        <p class="subtitle">Jan 25, 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trial of Valor -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/ToV.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Trial of Valor</p>
+                <p class="world-rank">116</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Helya</p>
+                    <a href="https://www.youtube.com/watch?v=YE_yhazQZR4" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">116</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 427</p>
+                        <p class="subtitle">Jan 02, 2017</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Guarm, Healers' Demise</p>
+                    <p class="world-rank">96</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 121</p>
+                        <p class="subtitle">Nov 27, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Odyn</p>
+                    <p class="world-rank">96</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 43</p>
+                        <p class="subtitle">Nov 20, 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emerald Nightmare -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/EN.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">The Emerald Nightmare</p>
+                <p class="world-rank">103</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Xavius</p>
+                    <a href="https://www.youtube.com/watch?v=l0pFmUN4XDc" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <p class="world-rank">103</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 21</p>
+                        <p class="subtitle">Oct 13, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Cenarius</p>
+                    <p class="world-rank">107</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 90</p>
+                        <p class="subtitle">Oct 13, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Il'gynoth</p>
+                    <p class="world-rank">112</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 60</p>
+                        <p class="subtitle">Oct 06, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Dragons of Nightmare</p>
+                    <p class="world-rank">138</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 28</p>
+                        <p class="subtitle">Oct 03, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Ursoc</p>
+                    <p class="world-rank">70</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 25</p>
+                        <p class="subtitle">Sep 29, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Elerethe Renferal</p>
+                    <p class="world-rank">133</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 16</p>
+                        <p class="subtitle">Sep 29, 2016</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Nythendra</p>
+                    <p class="world-rank">153</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: 13</p>
+                        <p class="subtitle">Sep 28, 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hellfire Citadel -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/HFC.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Hellfire Citadel</p>
+                <p class="world-rank">-</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Archimonde</p>
+                    <a href="https://www.youtube.com/watch?v=8ADUwJTc9Ew" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Sep 28, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Mannoroth</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Aug 31, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Xhul'horac</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Aug 17, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Tyrant Velhari</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Aug 10, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Fel Lord Zakuun</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Aug 02, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Shadow-Lord Iskar</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 27, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Socrethar the Eternal</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 26, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Gorefiend</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 23, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kilrogg Deadeye</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 12, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Hellfire High Council</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 6, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kormrok</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 5, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Iron Reaver</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 2, 2015 </p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Hellfire Assault</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Jul 2, 2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blackrock Foundry -->
+        <div class="raid-tier" onclick="toggleTier(this)">
+            <img src="../assets/media/Tiers/BRF.png" height="auto" width="100%">
+            <div class="flex-col tier-content">
+                <p class="tier-name">Blackrock Foundry</p>
+                <p class="world-rank">-</p>
+                <i class="open-tier material-icons md-36 ">arrow_circle_down</i>
+                <i class="close-tier material-icons md-36 ">highlight_off</i>
+            </div>
+
+            <div class="tier-bosses">
+                <div id="boss-container" class="flex-col">
+                    <p>Blackhand</p>
+                    <p class="world-rank">-</p>
+                    <a href="https://www.youtube.com/watch?v=v033uywCtkg" target="_blank" class="video-link" onclick="event.stopPropagation()"><i class="material-icons md-24" data-tooltip="Kill video" data-position="bottom">open_in_new</i><span class="tooltiptext">Show video</span></a>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Apr 12, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Blast Furnace</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Mar 23, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>The Iron Maidens</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Mar 09, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Operator Thogar</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Mar 02, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Kromog, Legend of the Mountain</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 26, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Flamebender Ka'graz</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 22, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Hans'gar and Franzok</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 16, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Oregorger the Devourer</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 15, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Gruul</p>
+
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 15, 2015</p>
+                    </div>
+                </div>
+                <div id="boss-container" class="flex-col">
+                    <p>Beastlord Darmac</p>
+                    <p class="world-rank">-</p>
+                    <div class="flex-row bottom-row">
+                        <p class="subtitle">Wipes: -</p>
+                        <p class="subtitle">Feb 11, 2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

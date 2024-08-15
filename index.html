@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Oblivion</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../javascripts/kill-count.js"></script>
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/kill-count.js"></script>
+    <script src="javascripts/navigation.js"></script>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+
+<body class="flex-row reset-gutter">
+    <nav class="mobile-menu flex-row display-mobile">
+        <i class="material-icons md-36 mobile-menu-icon" onclick="openNav()">menu</i>
+        <h1 class="main-header nav-header"><a href="https://sheffywow.github.io/oblivionguild/">OBLIVION</a></h1>
+    </nav>
+
+    <nav class="flex-col navigation" id="navigation">
+        <header>
+            <h1 class="main-header nav-header display-desktop"><a href="https://sheffywow.github.io/oblivionguild/">OBLIVION</a></h1>
+            <i class="material-icons md-36 mobile-menu-icon close-icon display-mobile" onclick="closeNav()">close</i>
+        </header>
+
+        <ul class="flex-row icons">
+            <li class="wowprogress-bg">
+                <!-- wowprogress favicon is so fucking scuffed that I just re-created it manually -->
+                <a href=https://www.wowprogress.com/guild/eu/blackrock/Oblivion target="_blank" rel="noopener noreferrer"><span class="wowprogress">W</span></a>
+            </li>
+            <li>
+                <a href=https://raider.io/guilds/eu/blackrock/Oblivion target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/media/icons/raiderio.png" alt="raiderio"></a>
+            </li>
+
+            <li>
+                <a href=https://www.warcraftlogs.com/guild/id/563170 target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/media/icons/warcraftlogs.png" alt="warcraftlogs"></a>
+            </li>
+        </ul>
+
+        <button class="button">
+            <a href="https://docs.google.com/forms/d/1l9cmVak1sj0khKXrwM1TPaDcbWHRt3GA8wIcr7lhYjU" class="apply" target="_blank" rel="noopener noreferrer">APPLY</a>
+        </button>
+
+        <ul class="legend">
+            <li><a href="/oblivionguild/" class="flex-row"><span class="emphasize">HOME </span><i
+                        class="emphasize material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/raiding" class="flex-row"><span>RAIDING </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/roster" class="flex-row"><span>ROSTER</span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/streams" class="flex-row"><span>STREAMS </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <li><a href="/oblivionguild/pages/boosting" class="flex-row"><span>BOOSTING </span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+            <!--<li><a href="oblivionguild/pages/videos">Videos/</a></li>-->
+            <li><a href="https://wago.io/p/squallne" target="_blank" rel="noopener noreferrer" class="flex-row"><span>WEAKAURAS</span><i
+                        class="material-icons md-18">navigate_next</i></a></li>
+        </ul>
+
+        <a class="github-link display-desktop" href="https://github.com/SheffyWoW/oblivionguild" target="_blank" rel="noopener noreferrer"><span class="flex-row">View on GitHub<i
+                    class="material-icons md-18 open-new-icon">open_in_new</i></span>
+            <small>github/oblivionguild</small></a>
+    </nav>
+
+    <section class="main-content flex-col">
+        <div class="text-content">
+            <p>Oblivion wurde 2006 unter dem Namen "Symphony" auf dem Server Anub'arak gegründet.
+            <br>Wir sind somit eine der ältesten deutschen World of Warcraft-Gilden.</p>
+            <p>Oberste Priorität hat bei uns effizientes Raiden <span>OHNE</span> Alt-Pflicht.
+            </p>
+
+            <p> Nach über 10 Jahren auf Anub'arak sind wir am 19.06.2020 mit allen Membern nach Blackrock gezogen.</p>
+            <br/>
+            <p><u>Progress-Schedule:</u></p>
+            <ul class="raid-schedule">
+                <li><span>MITTWOCH</span> 19.00 - 23.00 Uhr</span></li>
+                <li><span>DONNERSTAG</span><span> 19.00 - 23.00 Uhr</span></li>
+                <li><span>SONNTAG</span><span> 19.00 - 23.00 Uhr</span></li>
+                <li><span>MONTAG</span><span> 19.00 - 23.00 Uhr</span></li>
+                </li>
+            </ul>
+
+            <p>Wir halten unsere Logs immer öffentlich.</p>
+            </div>
+
+            <div class="table-content">
+                <div class="table-header">
+                    <h2 class="main-header display-desktop">Gildenhistorie</h2>
+                    <h2 class="main-header display-mobile">Gildenhistorie</h2>
+
+                </div>
+
+                <table class="kill-count-table" id="kill-count-table">
+                    <tbody>
+                        <tr>
+                            <th>World</th>
+                            <th>Boss</th>
+                            <th>Wipes</th>
+                            <th>Date</th>
+                        </tr>
+                            <td colspan="4" class="tier"><strong>Amirdrassil, the Dream's Hope</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">61</td>
+                            <td>Fyrakk the Blazing</td>
+                            <td>334</td>
+                            <td>Jan 04, 2024</td>
+                            </tr>
+                            <td colspan="4" class="tier"><strong>Aberrus, the Shadowed Crucible</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">57</td>
+                            <td>Scalecommander Sarkareth</td>
+                            <td>146</td>
+                            <td>Jun 06, 2023</td>
+                            </tr>
+                        <tr>
+                            <td colspan="4" class="tier"><strong>Vault of the Incarnates</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">104</td>
+                            <td>Raszageth</td>
+                            <td>370</td>
+                            <td>Feb 05, 2023</td>
+                            </tr>
+                        <tr>
+                            <td colspan="4" class="tier"><strong>Sepulcher of the First Ones</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">82</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T28_Sepulcher/oblivion_jailer.png">The Jailer</td>
+                            <td>294</td>
+                            <td>May 05, 2022</td>
+                            </tr>
+                        <tr>
+                            <td colspan="4" class="tier"><strong>Sanctum of Domination</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">93</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T27_Sanctum/oblivion_sylvanas.png">Sylvanas Windrunner</td>
+                            <td>118</td>
+                            <td>Aug 12, 2021</td>
+                            </tr>
+                        <tr>
+                            <td colspan="4" class="tier"><strong>Castle Nathria</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">72</td>
+                            <td>Sire Denathrius</td>
+                            <td>102</td>
+                            <td>Jan 27, 2021</td>
+                            </tr>
+                        <tr>
+                            <td colspan="4" class="tier"><strong>Ny'alotha, the Waking City</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">110</td>
+                            <td>N'Zoth the Corruptor</td>
+                        <td>212</td>
+                        <td>Mar 12, 2020</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>The Eternal Palace</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">114</td>
+                            <td>Queen Azshara</td>
+                        <td>293</td>
+                        <td>Sep 05, 2019</td>
+                        </tr>
+                        <tr><td colspan="4"><strong>Crucible of Storms</strong></td></tr>
+                    <tr>
+                        <td class="world-rank">85</td>
+                        <td>Uu'nat, Harbinger of the Void</td>
+                        <td>454</td>
+                        <td>Jun 02, 2019</td>
+                    </tr>
+                    <tr><td colspan="4"><strong>Battle of Dazar'alor</strong></td></tr>
+                    <tr>
+                        <td class="world-rank">96</td>
+                        <td>Jaina Proudmoore</td>
+                            <td>319</td>
+                            <td>Mar 07, 2019</td>
+                        </tr>
+                            <td colspan="4"><strong>Uldir</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">140</td>
+                            <td>G'huun</td>
+                            <td>268</td>
+                            <td>Oct 21, 2018</td>
+                        </tr>
+                            <td colspan="4"><strong>Antorus, the Burning Throne</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">78</td>
+                            <td>Argus the Unmaker</td>
+                            <td>370</td>
+                            <td>Jan 25, 2018</td>
+                        </tr>
+                            <td colspan="4"><strong>Tomb of Sargeras</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">83</td>
+                            <td>Kil'jaeden</td>
+                            <td>533</td>
+                            <td>Sep 18, 2017</td>
+                        </tr>
+                            <td colspan="4"><strong>Nighthold, Trial of Valor, Emerald Nightmare</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">129</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T19_Nighthold/oblivion_guldan.png">Gul'dan</a></td>
+                            <td>287</td>
+                            <td>Apr 12, 2017</td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">116</td>
+                            <td>Helya</td>
+                            <td>447</td>
+                            <td>Jan 02, 2017</td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">102</td>
+                            <td>Xavius</td>
+                            <td>41</td>
+                            <td>Oct 13, 2016</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Hellfire Citadel</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td>Archimonde</td>
+                            <td>-</td>
+                            <td>Sep 28, 2015</td>
+                        </tr>
+                            <td colspan="4"><strong>Blackrock Foundry, Highmaul</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T17_BlackrockFoundry/oblivion_blackhand.png">Blackhand</a></td>
+                            <td>-</td>
+                            <td>Apr 12, 2015</td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T17_Highmaul/oblivion_margok.png">Imperator Mar'gok</a></td>
+                            <td>-</td>
+                            <td>Jan 22, 2015</td>
+                        </tr>
+                            <td colspan="4"><strong>Siege of Orgrimmar</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T16_SiegeOfOrgrimmar/oblivion_garrosh25.png">Garrosh Hellscream (25)</a></td>
+                            <td>-</td>
+                            <td>Nov 25, 2013</td>
+                        </tr>
+                            <td colspan="4"><strong>Throne of Thunder</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td>Ra-den (10)</td>
+                            <td>-</td>
+                            <td>Jun 03, 2013</td>
+                        </tr>
+                        <td colspan="4"><strong>Blackwing Descent</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T11_BlackwingDescent/oblivion_nefarian.png">Nefarian</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <td colspan="4"><strong>Throne of the Four Winds</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T11_ThroneOfTheFourWinds/oblivion_alakir.png">Al'Akir</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <td colspan="4"><strong>Icecrown Citadel</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T10_IcecrownCitadel/oblivion_lichking.png">The Lich King</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <td colspan="4"><strong>Trial of the Crusader</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T9_TrialOfTheCrusader/oblivion_anubarak.png">Anub'arak</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <td colspan="4"><strong>Ulduar</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T8_Ulduar/oblivion_yoggsaron.png">Yogg-Saron</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <td colspan="4"><strong>Ruins of Ahn'Qiraj</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="world-rank">-</td>
+                            <td class="emphasize"><a href="https://raw.githubusercontent.com/sheffywow/oblivionguild/master/assets/media/T3.5_RuinsOfAhnQiraj/oblivion_ossirian.png">Ossirian the Unscarred</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </section>
+
+</body>
+
+</html>

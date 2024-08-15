@@ -1,0 +1,175 @@
+/* CSS Variables */
+
+:root {
+    --primary-color: #02B4E5;
+    --secondary-color: #02F2E6;
+    --default-margin: 16px 32px;
+    --text-color: white;
+    --secondary-text-color: #777;
+    --background-primary: rgb(12, 12, 12);
+    --background-secondary: rgb(24, 24, 24);
+    --background-dark: rgb(33, 33, 33);
+}
+
+p {
+    margin: 0;
+}
+
+.tier-row {
+    flex-wrap: wrap;
+    align-content: baseline;
+    align-items: flex-start;
+}
+
+.raid-tier {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-secondary);
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+    transition: 0.2s;
+    margin: 0 16px 16px 0;
+    cursor: pointer;
+}
+
+.raid-tier img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.tier-name {
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.world-rank {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+.tier-content {
+    align-content: center;
+    position: relative;
+    padding: 5px;
+}
+
+.tier-table {
+    display: none;
+}
+
+.open-tier {
+    position: absolute;
+    right: 15px;
+    bottom: 2px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.material-icons.close-tier {
+    opacity: 0;
+    display: none;
+}
+
+.open .tier-content {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.open.raid-tier {
+    height: auto;
+    transition: 0.2s;
+    box-shadow: -5px -5px 12px 5px var(--primary-color), 5px 5px 12px 5px var(--secondary-color);
+}
+
+.open .open-tier {
+    display: none;
+}
+
+.open .close-tier {
+    position: absolute;
+    right: 15px;
+    bottom: 2px;
+    opacity: 0.5;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#boss-container {
+    display: none;
+}
+
+.open #boss-container {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+#boss-container p:not(.subtitle):first-child {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.video-link {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+}
+
+.video-link .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--background-dark);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.video-link:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.8;
+}
+
+.bottom-row {
+    justify-content: space-between;
+}
+
+.subtitle {
+    color: var(--secondary-text-color);
+}
+
+.tier-bosses>#boss-container:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 960px) {
+    .raid-tier {
+        width: 100%;
+        margin: 16px 15px;
+    }
+    .raid-tier .world-rank {
+        font-size: 32px;
+    }
+    .raid-tier .tier-content {
+        padding-bottom: 10px;
+    }
+    .raid-tier .tier-name {
+        font-size: 20px;
+    }
+    .raid-tier .open-tier {
+        bottom: 5px;
+    }
+    .raid-tier .close-tier {
+        bottom: 5px;
+    }
+}

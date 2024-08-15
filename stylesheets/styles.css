@@ -1,0 +1,440 @@
+    @import url('/stylesheets/material-icons.css');
+    /* TODO: REMOVE REDUNDANT CODE */
+    /* CSS Variables */
+    
+     :root {
+        --primary-color: #02B4E5;
+        --secondary-color: #02F2E6;
+        --default-margin: 16px 32px;
+        --text-color: white;
+        --secondary-text-color: #777;
+        --background-primary: rgb(12, 12, 12);
+        --background-secondary: rgb(24, 24, 24);
+        --background-dark: rgb(33, 33, 33);
+    }
+    
+    @font-face {
+        font-family: 'Oblivion';
+        src: url('../assets/fonts/Gotham-Font/HomepageBaukasten-Book.woff');
+    }
+    
+    @font-face {
+        font-family: 'Oblivion-header';
+        src: url('../assets/fonts/Gotham-Font/GothamLight.ttf');
+    }
+    
+    @font-face {
+        font-family: 'Oblivion-apply';
+        src: url('../assets/fonts/Gotham-Font/GothamMedium.ttf');
+    }
+    /* Common asset classes */
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .reset-gutter {
+        padding: 0;
+        margin: 0;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .emphasize,
+    .emphasize a {
+        color: var(--primary-color) !important;
+    }
+    
+    body {
+        margin: 0 auto !important;
+        width: 1300px;
+        background-color: var(--background-primary);
+        color: var(--text-color);
+        font-family: 'Oblivion';
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--text-color);
+        margin: 0 0 20px;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        line-height: 1.1;
+    }
+    
+    a:hover {
+        color: var(--primary-color);
+    }
+    /* make scrollbar transparent */
+    
+     ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    /* NAVIGATION */
+    
+    .navigation {
+        background-color: var(--background-secondary);
+        padding: 24px;
+        height: 100vh;
+        width: 300px;
+        position: fixed;
+        transition: 0.4s;
+    }
+    
+    .navigation * {
+        transition: none;
+    }
+    
+    .main-header {
+        font-family: 'Oblivion-header';
+        width: 250px;
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: 5px;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .nav-header:hover {
+        cursor: pointer;
+    }
+    
+    .wowprogress-bg {
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        opacity: 0.5;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.2s;
+    }
+    
+    .wowprogress-bg:hover {
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+    
+    .wowprogress {
+        font-weight: bolder;
+        font-size: 16px;
+        line-height: 40px;
+        color: white;
+    }
+    
+    a small {
+        font-size: 11px;
+        color: #777;
+        margin-top: -0.3em;
+        display: block;
+    }
+    
+    .github-link {
+        position: fixed;
+        bottom: 24px;
+    }
+    
+    .open-new-icon {
+        margin-left: 5px;
+    }
+    /* MAIN-CONTENT */
+    
+    .main-content {
+        padding: var(--default-margin);
+        background-color: var(--background-dark);
+        width: 100%;
+        margin-left: 300px;
+        min-height: 100vh;
+    }
+    
+    blockquote {
+        border-left: 1px solid #e5e5e5;
+        margin: 0;
+        padding: 0 0 0 20px;
+        font-style: italic;
+    }
+    
+    .table-header {
+        width: 100%;
+        height: 55px;
+        background-color: var(--background-secondary);
+        text-align: center;
+    }
+    
+    .table-header h2 {
+        width: 100%;
+        text-align: start;
+        padding: 10px;
+        letter-spacing: 1px;
+        font-size: 32px;
+    }
+    
+    .excerpt-container {
+        border: 10px solid var(--background-secondary);
+        border-top: 0;
+    }
+    /* TABLE STYLING */
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: var(--background-secondary);
+    }
+    
+    th,
+    td {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid #606060;
+    }
+    
+    td:nth-child(1) {
+        text-align: center;
+    }
+    
+    dt {
+        color: #444;
+        font-weight: 500;
+    }
+    
+    th {
+        color: var(--text-color);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    img.icon {
+        width: 40px;
+        height: 40px;
+        opacity: 0.5;
+        transition: 0.2s
+    }
+
+    img.icon:hover {
+        opacity: 1.0;
+        transform: scale(1.2);
+    }
+    
+    .button {
+        list-style: none;
+        min-height: 45px;
+        padding: 0;
+        background: linear-gradient(145deg, #016480 0, var(--primary-color), #02F2E6 100%);
+        border-radius: 2px;
+        border: none;
+        width: 100%;
+        transition: 0.5s;
+    }
+    
+    .button:hover {
+        cursor: pointer;
+        background: linear-gradient(325deg, #016480 0, var(--primary-color), #02F2E6 100%);
+    }
+    
+    .button .apply {
+        font-family: 'Oblivion';
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    .apply:hover {
+        color: white;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        justify-content: space-around;
+        margin: 32px 0;
+    }
+    
+    ul.legend {
+        list-style: none;
+        padding: 0;
+        margin: 32px 0;
+    }
+    
+    ul.legend li {
+        padding-bottom: 32px;
+    }
+    
+    .raid-schedule li {
+        display: flex;
+        flex-direction: row;
+        max-width: 50%;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    
+    .boosting-prices li {
+        display: flex;
+        flex-direction: row;
+        max-width: 45%;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    p.space {
+        padding-top: 10px;
+    }
+    
+    strong {
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    
+    small {
+        font-size: 11px;
+    }
+    
+    .display-mobile {
+        display: none !important;
+    }
+    
+    @media screen and (max-width: 960px) {
+        body {
+            width: 100%;
+        }
+        .navigation {
+            width: 75vw;
+            left: -75vw;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            padding: 15px 24px 24px 24px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            border-right: rgba(255, 255, 255, 0.6) 1px solid;
+            z-index: 99;
+        }
+        .main-content {
+            margin-left: 0;
+            padding: 15px;
+        }
+        .table-header {
+            height: auto;
+        }
+        .display-desktop {
+            display: none;
+        }
+        .display-mobile {
+            display: flex !important;
+        }
+        .reset-gutter {
+            flex-wrap: wrap;
+        }
+        .mobile-menu {
+            width: 100%;
+            flex: 0 0 100%;
+            padding: 15px;
+            background-color: var(--background-secondary);
+            position: sticky;
+            z-index: 99;
+            top: 0;
+            align-self: flex-start;
+        }
+        .mobile-menu-icon {
+            line-height: 39px;
+            vertical-align: middle;
+        }
+        .text-content p:first-child {
+            margin-top: 0;
+        }
+        .close-icon {
+            float: right;
+        }
+        ul.icons {
+            margin: 48px 0 32px 0;
+        }
+        .schedule-info {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-height: 450px) {
+        .legend {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    
+    @media screen and (min-width: 3000px) {
+        body {
+            width: 1800px;
+        }
+        .navigation {
+            width: 500px;
+        }
+        .main-content {
+            margin-left: 500px;
+        }
+        .button {
+            height: 60px;
+        }
+        p,
+        span,
+        a,
+        .button .apply,
+        strong {
+            font-size: 24px;
+        }
+        h2.roster-header {
+            font-size: 46px;
+        }
+        h1.main-header a {
+            font-size: 3.5vh;
+        }
+    }
+	
+	@media screen and (max-width: 768px) {
+		.boosting-prices li {
+			max-width: 100%;
+		}
+	}
+    
+    .rank-legendary {
+        color: #FF8000;
+    }
+    
+    .rank-epic {
+        color: #A335EE;
+    }
+    
+    .rank-rare {
+        color: #0070DD;
+    }
+    
+    .rank-uncommon {
+        color: #1EFF00;
+    }
+    
+    .rank-default {
+        color: var(--secondary-text-color);
+    }
