@@ -1,5 +1,5 @@
 # Oblivion
-## https://oblivio-blackrock.github.io/
+## https://oblivion-blackrock.github.io/
 
 
 *Minimal* theme provided by https://github.com/orderedlist/minimal
