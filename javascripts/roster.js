@@ -181,6 +181,12 @@ document.addEventListener("DOMContentLoaded", function () {
         austria[i].src = "../assets/media/Flags/austria-flag-button-square-icon-32.png";
     }
 
+        /* Turkey */
+    const turkey = document.getElementsByClassName('turkey');
+    for (let i = 0; i < turkey.length; i++) {
+        turkey[i].src = "../assets/media/Flags/turkey-flag-button-square-icon-32.png";
+    }
+
     /* Switzerland */
     const swiss = document.getElementsByClassName('switzerland');
     for (let i = 0; i < swiss.length; i++) {
